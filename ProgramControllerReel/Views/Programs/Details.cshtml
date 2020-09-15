@@ -1,0 +1,55 @@
+﻿@model ProgramControllerReel.Models.Programs
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>@Html.DisplayFor(model => model.ProgramName) Project Details</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt style="font-size:20px">
+            @Html.DisplayNameFor(model => model.ProjectDetails)
+        </dt>
+        <dd style="font-size:20px">
+            @Html.DisplayFor(model => model.ProjectDetails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProgramName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProgramName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectOwner)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectOwner)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectManager)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectManager)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DueDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DueDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+    
+</div>

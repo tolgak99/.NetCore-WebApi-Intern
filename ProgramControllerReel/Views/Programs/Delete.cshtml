@@ -1,0 +1,56 @@
+﻿@model ProgramControllerReel.Models.Programs
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<h3>Are you sure you want to delete  @Html.DisplayFor(model => model.ProgramName) project?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProgramName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProgramName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectOwner)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectOwner)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectManager)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectManager)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DueDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DueDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectDetails)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
