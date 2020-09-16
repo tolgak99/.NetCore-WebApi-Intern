@@ -14,7 +14,8 @@ namespace ProgramControllerReel.Migrations.Notes
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Owner = table.Column<string>(nullable: true),
-                    NoteTitle = table.Column<string>(nullable: true)
+                    NoteTitle = table.Column<string>(nullable: true),
+                    NoteContent = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

@@ -4,12 +4,18 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<h2>@Html.DisplayFor(model => model.NoteTitle) CONTENT</h2>
 
 <div>
-    <h4>Notes</h4>
+   
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NoteContent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NoteContent)
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Owner)
         </dt>

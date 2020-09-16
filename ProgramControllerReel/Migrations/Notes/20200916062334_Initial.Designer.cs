@@ -9,7 +9,7 @@ using ProgramControllerReel.Models;
 namespace ProgramControllerReel.Migrations.Notes
 {
     [DbContext(typeof(NotesContext))]
-    [Migration("20200915223558_Initial")]
+    [Migration("20200916062334_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,6 +25,8 @@ namespace ProgramControllerReel.Migrations.Notes
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("NoteContent");
 
                     b.Property<string>("NoteTitle");
 

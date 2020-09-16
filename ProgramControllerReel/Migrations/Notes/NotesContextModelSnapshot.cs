@@ -24,6 +24,8 @@ namespace ProgramControllerReel.Migrations.Notes
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("NoteContent");
+
                     b.Property<string>("NoteTitle");
 
                     b.Property<string>("Owner");

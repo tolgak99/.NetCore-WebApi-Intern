@@ -53,7 +53,7 @@ namespace ProgramControllerReel.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Owner,NoteTitle")] Notes notes)
+        public async Task<IActionResult> Create([Bind("Id,Owner,NoteTitle,NoteContent")] Notes notes)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace ProgramControllerReel.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Owner,NoteTitle")] Notes notes)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Owner,NoteTitle,NoteContent")] Notes notes)
         {
             if (id != notes.Id)
             {
