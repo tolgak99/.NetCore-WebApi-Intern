@@ -4,10 +4,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Program List</h2>
+<h2 style="margin-top:3%">Program List</h2>
 
 
-<table class="table">
+<table class="table" style="margin-top:2%">
     <thead style="background-color:#337ab7">
         <tr>
             <th>
@@ -52,7 +52,7 @@
             
             <td>
                 <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                     <div class="modal-dialog" role="document">

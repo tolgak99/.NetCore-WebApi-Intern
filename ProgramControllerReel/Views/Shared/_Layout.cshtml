@@ -18,7 +18,7 @@
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container" style="margin-left:2%; width:100%">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -26,17 +26,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Programs" asp-action="Index" class="navbar-brand">ProgramController</a>
+                <a asp-controller="Programs" asp-action="Index" class="navbar-brand">ProgramController</a>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Notes" asp-action="Index">Notes</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                 </ul>
-                <form class="form-inline" style="margin-left:70%; margin-top:0.7%" asp-controller="Programs" asp-action="Index">
+                <form class="form-inline" style="margin-left:75%; margin-top:0.7%" asp-controller="Programs" asp-action="Index">
                    
                     <input class="form-control mr-sm-2" type="text" name="SearchKey">
-                    <input type="submit" value="Search" />
+                    <input type="submit" value="Search" class="btn btn-info" />
                         
                 </form>
             </div>

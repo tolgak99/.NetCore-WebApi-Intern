@@ -2,18 +2,19 @@
 
 @{
     ViewData["Title"] = "Details";
+    Layout = null;
 }
 
-<h2>@Html.DisplayFor(model => model.NoteTitle) CONTENT</h2>
+<h2 style="background-color:#337ab7">@Html.DisplayFor(model => model.NoteTitle) CONTENT</h2>
 
 <div>
    
     <hr />
     <dl class="dl-horizontal">
-        <dt>
+        <dt style="font-size:20px">
             @Html.DisplayNameFor(model => model.NoteContent)
         </dt>
-        <dd>
+        <dd style="font-size:20px">
             @Html.DisplayFor(model => model.NoteContent)
         </dd>
         <dt>
@@ -31,6 +32,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-success">Edit</a> |
-    <a asp-action="Index" class="btn btn-primary" >Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-success" style="margin-bottom:2%; margin-left:2%">Edit</a> |
+    <a asp-action="Index" class="btn btn-primary" style="margin-bottom:2%" >Back to List</a>
 </div>
