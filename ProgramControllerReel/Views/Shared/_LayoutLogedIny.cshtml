@@ -26,13 +26,26 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-controller="Home" asp-action="Index" class="navbar-brand">ProgramController</a>
+                <a class="navbar-brand">ProgramController</a>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav navbar-nav">
-                    <li><a asp-controller="Login" asp-action="Create" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"  style=" margin-top:0.3%;margin-bottom:0.1% ;margin-left:1050px">Login</a></li>
-                    <li><a asp-controller="Register" asp-action="Create" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"  style=" margin-top:3.8%;margin-bottom:0.1% ;margin-left:20px"> Register </a></li>  
+                    <li><a asp-area="" asp-controller="Notes" asp-action="Index">Notes</a></li>
+                    <li><a asp-area="" asp-controller="Programs" asp-action="Index">Programs</a></li>
                 </ul>
+
+                <form class="form-inline" style="margin-left:65%; margin-top:0.6%; " asp-controller="Programs" asp-action="Index">
+
+                    <input class="form-control mr-sm-2" type="text" name="SearchKey">
+                    <input type="submit" value="Search" class="btn btn-info" />
+                    <a style="margin-left:15%" class="btn btn-primary" asp-controller="Home" asp-action="Index">Log Out</a>
+                </form>
+
+                
+                  
+             
+                
+
             </div>
 
         </div>
@@ -70,7 +83,5 @@
     </environment>
 
     @RenderSection("Scripts", required: false)
-
-
 </body>
 </html>
